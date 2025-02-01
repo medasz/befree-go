@@ -41,7 +41,7 @@ func Execute(yamlFile string, clashPath string) {
 		}
 	}()
 	fmt.Println(" [+] running...")
-	cmd := exec.Command(clashPath, "-f", yamlFile)
+	cmd := exec.Command("cmd", "/C", clashPath, "-f", yamlFile)
 	cmd.Stderr = os.Stderr
 	cmd.Stdout = os.Stdout
 	if err := cmd.Run(); err != nil {
