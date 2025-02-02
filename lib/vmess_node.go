@@ -14,8 +14,16 @@ type VMessNode struct {
 	Cipher string
 }
 
-func (VMessNode) ToClashProxy() {
+func (v *VMessNode) ToClashProxy() {
 
+}
+
+func (v *VMessNode) GetName() string {
+	return v.Name
+}
+
+func (v *VMessNode) SetName(name string) {
+	v.Name = name
 }
 
 type vmessNodeRaw struct {

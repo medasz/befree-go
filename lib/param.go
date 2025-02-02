@@ -135,7 +135,7 @@ func ParseNodes(rawData string) ([]Node, error) {
 			if err != nil {
 				return nil, err
 			}
-			totalVmessCount++
+			TotalVmessCount++
 		} else if strings.HasPrefix(line, "ss://") {
 
 		} else if strings.HasPrefix(line, "ssr://") {

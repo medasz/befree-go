@@ -70,7 +70,13 @@ func main() {
 		fmt.Printf(" [+] 其中包含trojan节点数量为: %d", lib.TotalTrojanCount)
 
 		if len(allNodes) > 0 {
-
+			outputFile := "sectest.yaml"
+			lib.GenerateConfig(allNodes)
+			//4.运行clash
+			if err := lib.Runner(outputFile, ClashPath); err != nil {
+				fmt.Println(err)
+				os.Exit(1)
+			}
 		} else {
 			fmt.Println(" [-] 未获取到可用节点，无法启动befree")
 		}
