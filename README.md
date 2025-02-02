@@ -31,7 +31,7 @@ Usage of
 ## 待辦項
 - [x] 完成-y和-c參數
 - [x] 完成linux和windows兼容
-- [ ] 完成-f參數
+- [x] 完成vmess協議
 - [ ] 完成-p參數
 - [ ] 完成-t參數
 - [ ] 完成mac測試
