@@ -99,6 +99,8 @@ func NewVMessNode(rawData string) (Node, error) {
 		node.Port = port
 	case string:
 		node.Port, err = strconv.Atoi(port)
+	case float64:
+		node.Port = int(port)
 	}
 	if vmessNode.Cipher != "" {
 		node.Cipher = vmessNode.Cipher
