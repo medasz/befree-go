@@ -20,6 +20,18 @@ var (
 	TotalTrojanCount int
 )
 
+// Exists 判断所给路径文件/文件夹是否存在
+func Exists(path string) bool {
+	_, err := os.Stat(path) //os.Stat获取文件信息
+	if err != nil {
+		if os.IsExist(err) {
+			return true
+		}
+		return false
+	}
+	return true
+}
+
 func FileExists(place string) bool {
 	f, err := os.Stat(place)
 	if err != nil {
@@ -147,4 +159,28 @@ func ParseNodes(rawData string) ([]Node, error) {
 		}
 	}
 	return nodes, nil
+}
+
+func FormatProxyConfig(proxy NodeProxy) string {
+	res := ""
+	res += fmt.Sprintf("  - name: %s\n", proxy.GetName())
+	res += fmt.Sprintf("    type: %s\n", proxy.GetType())
+	res += fmt.Sprintf("    server: %s\n", proxy.GetServer())
+	res += fmt.Sprintf("    port: %d\n", proxy.GetPort())
+	if proxy.GetPassword() != nil {
+		res += fmt.Sprintf("    password: %s\n", proxy.GetPassword())
+	}
+	if proxy.GetCipher() != nil {
+		res += fmt.Sprintf("    cipher: %s\n", proxy.GetCipher())
+	}
+	if proxy.GetUuid() != nil {
+		res += fmt.Sprintf("    uuid: %s\n", proxy.GetUuid())
+	}
+	if proxy.GetAlterId() != nil {
+		res += fmt.Sprintf("    alterId: %d\n", proxy.GetAlterId())
+	}
+	if proxy.GetSkipCertVerify() != nil {
+		res += fmt.Sprintf("    skipCertVerify: %t\n", proxy.GetSkipCertVerify())
+	}
+	return res
 }

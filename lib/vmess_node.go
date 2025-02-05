@@ -6,6 +6,40 @@ import (
 	"strconv"
 )
 
+type VMessNodeProxy struct {
+	*VMessNode
+	Type    string
+	AlterId int
+}
+
+func NewVMessNodeProxy(n *VMessNode) *VMessNodeProxy {
+	return &VMessNodeProxy{n, "vmess", 0}
+}
+func (n *VMessNodeProxy) GetType() string {
+	return n.Type
+}
+func (n *VMessNodeProxy) GetServer() string {
+	return n.Server
+}
+func (n *VMessNodeProxy) GetPort() int {
+	return n.Port
+}
+func (n *VMessNodeProxy) GetPassword() any {
+	return nil
+}
+func (n *VMessNodeProxy) GetCipher() any {
+	return n.Cipher
+}
+func (n *VMessNodeProxy) GetUuid() any {
+	return n.UUID
+}
+func (n *VMessNodeProxy) GetAlterId() any {
+	return n.AlterId
+}
+func (n *VMessNodeProxy) GetSkipCertVerify() any {
+	return nil
+}
+
 type VMessNode struct {
 	Name   string
 	Server string
@@ -14,8 +48,8 @@ type VMessNode struct {
 	Cipher string
 }
 
-func (v *VMessNode) ToClashProxy() {
-
+func (v *VMessNode) ToClashProxy() NodeProxy {
+	return NewVMessNodeProxy(v)
 }
 
 func (v *VMessNode) GetName() string {
@@ -35,7 +69,7 @@ type vmessNodeRaw struct {
 	Path           string `json:"path"`
 	Port           any    `json:"port"`
 	Ps             string `json:"ps"`
-	Tls            string `json:"tls"`
+	Tls            any    `json:"tls"`
 	Type           string `json:"type"`
 	Security       string `json:"security"`
 	SkipCertVerify bool   `json:"skip-cert-verify"`

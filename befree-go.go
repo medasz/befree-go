@@ -67,11 +67,14 @@ func main() {
 		// 输出所有协议类型节点的总数
 		fmt.Printf(" [+] 其中包含vmess节点数量为: %d\n", lib.TotalVmessCount)
 		fmt.Printf(" [+] 其中包含ss节点数量为: %d\n", lib.TotalSsCount)
-		fmt.Printf(" [+] 其中包含trojan节点数量为: %d", lib.TotalTrojanCount)
+		fmt.Printf(" [+] 其中包含trojan节点数量为: %d\n", lib.TotalTrojanCount)
 
 		if len(allNodes) > 0 {
 			outputFile := "sectest.yaml"
-			lib.GenerateConfig(allNodes)
+			if err := lib.GenerateConfig(allNodes, outputFile, Port, Target); err != nil {
+				fmt.Println(err)
+				os.Exit(1)
+			}
 			//4.运行clash
 			if err := lib.Runner(outputFile, ClashPath); err != nil {
 				fmt.Println(err)
