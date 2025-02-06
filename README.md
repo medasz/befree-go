@@ -32,9 +32,10 @@ Usage of
 - [x] 完成-y和-c參數
 - [x] 完成linux和windows兼容
 - [x] 完成vmess協議
-- [ ] 完成-p參數
-- [ ] 完成-t參數
-- [ ] 完成mac測試
+- [x] 完成trojan協議
+- [x] 完成shadowsocks協議
+- [x] 完成-p參數
+- [x] 完成-t參數
 
 ## 注意
 <span style="color: red">自帶的windows和linux版clash全是本人從網上下載，請自行甄別安全性，也可通過`-c`參數指定clash
