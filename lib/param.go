@@ -153,6 +153,11 @@ func ParseNodes(rawData string) ([]Node, error) {
 		} else if strings.HasPrefix(line, "ssr://") {
 
 		} else if strings.HasPrefix(line, "trojan://") {
+			node, err = NewTrojanNode(strings.TrimPrefix(line, "trojan://"))
+			if err != nil {
+				return nil, err
+			}
+			TotalTrojanCount++
 		}
 		if node != nil {
 			nodes = append(nodes, node)
