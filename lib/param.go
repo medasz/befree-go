@@ -149,7 +149,11 @@ func ParseNodes(rawData string) ([]Node, error) {
 			}
 			TotalVmessCount++
 		} else if strings.HasPrefix(line, "ss://") {
-
+			node, err = NewShadowsocksNode(strings.TrimPrefix(line, "ss://"))
+			if err != nil {
+				return nil, err
+			}
+			TotalSsCount++
 		} else if strings.HasPrefix(line, "ssr://") {
 
 		} else if strings.HasPrefix(line, "trojan://") {
