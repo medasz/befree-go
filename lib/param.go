@@ -130,9 +130,7 @@ func cleanBase64String(base64String string) string {
 	base64String = strings.ReplaceAll(base64String, "\r", "")
 	base64String = strings.TrimSpace(base64String)
 	if len(base64String)%4 != 0 {
-		for i := 0; i < len(base64String)+(4-len(base64String)%4); i += 4 {
-		}
-		base64String += "="
+		base64String += strings.Repeat("=", 4-len(base64String)%4)
 	}
 	return base64String
 }

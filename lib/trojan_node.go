@@ -71,6 +71,8 @@ func NewTrojanNode(rawData string) (Node, error) {
 	if err != nil {
 		name = "aasda"
 	}
+	name = strings.Trim(name, "\n")
+	name = strings.Trim(name, "\r")
 	node := &TrojanNode{
 		Name:     name,
 		Server:   strings.Split(a[1], ":")[0],

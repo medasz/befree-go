@@ -2,7 +2,6 @@ package lib
 
 import (
 	"encoding/base64"
-	"fmt"
 	"net/url"
 	"strconv"
 	"strings"
@@ -62,7 +61,6 @@ func (t *ShadowsocksNode) SetName(name string) {
 }
 
 func NewShadowsocksNode(rawData string) (Node, error) {
-	fmt.Println("----", rawData)
 	parts := strings.Split(rawData, "#")
 	name, err := url.QueryUnescape(parts[1])
 	if err != nil {
@@ -77,6 +75,14 @@ func NewShadowsocksNode(rawData string) (Node, error) {
 			return nil, err
 		}
 		cipherPasswords := strings.Split(string(cipherPassword), ":")
+		if cipherPasswords[0] == "ss" {
+			cipherPassword2 := strings.Trim(cipherPasswords[1], "//")
+			cipherPassword, err = base64.StdEncoding.DecodeString(cleanBase64String(cipherPassword2))
+			if err != nil {
+				return nil, err
+			}
+		}
+		cipherPasswords = strings.Split(string(cipherPassword), ":")
 		cipher = cipherPasswords[0]
 		password = cipherPasswords[1]
 		serverPort := strings.Split(parts2[1], ":")
