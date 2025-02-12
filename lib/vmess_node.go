@@ -4,6 +4,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"strconv"
+	"strings"
 )
 
 type VMessNodeProxy struct {
@@ -89,7 +90,7 @@ func NewVMessNode(rawData string) (Node, error) {
 		return nil, err
 	}
 	node := &VMessNode{
-		Name:   vmessNode.Ps,
+		Name:   strings.ReplaceAll(vmessNode.Ps, "#", ""),
 		Server: vmessNode.Add,
 		UUID:   vmessNode.Id,
 		Cipher: "auto",

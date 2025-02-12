@@ -67,6 +67,7 @@ func NewShadowsocksNode(rawData string) (Node, error) {
 		name = "xxxx"
 	}
 	name = strings.TrimSpace(name)
+	name = strings.ReplaceAll(name, "#", "")
 	var cipher, password, server, port string
 	if strings.Contains(parts[0], "@") {
 		parts2 := strings.Split(parts[0], "@")
@@ -88,6 +89,7 @@ func NewShadowsocksNode(rawData string) (Node, error) {
 		serverPort := strings.Split(parts2[1], ":")
 		server = strings.TrimSpace(serverPort[0])
 		port = strings.TrimSpace(serverPort[1])
+		port = strings.Split(port, "?")[0]
 	} else {
 		parts2, err := base64.StdEncoding.DecodeString(cleanBase64String(parts[0]))
 		if err != nil {

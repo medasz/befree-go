@@ -73,6 +73,7 @@ func NewTrojanNode(rawData string) (Node, error) {
 	}
 	name = strings.Trim(name, "\n")
 	name = strings.Trim(name, "\r")
+	name = strings.ReplaceAll(name, "#", "")
 	node := &TrojanNode{
 		Name:     name,
 		Server:   strings.Split(a[1], ":")[0],
