@@ -1,0 +1,348 @@
+allowLan: false
+mixed-port: 59981
+rules:
+  - MATCH, proxy_pool
+proxy-groups:
+  - name: proxy_pool
+    type: load-balance
+    proxies:
+      - 高性价比机场:https://kfyun.uk
+      - 0|🇰🇷1 |  5.5MB/s
+      - 0|🇸🇬1 |  4.7MB/s
+      - 0|🇸🇬2 |  1.2MB/s
+      - 13|🇭🇰 香港3|@ripaojiedian
+      - 13|🇭🇰 香港4|@ripaojiedian
+      - 13|🇭🇰 香港5|@ripaojiedian
+      - 13|🇭🇰 香港6|@ripaojiedian
+      - 13|🇹🇼 台湾|@ripaojiedian
+      - 13|🇯🇵 日本|@ripaojiedian
+      - 13|🇯🇵 日本2|@ripaojiedian
+      - 13|🇯🇵 日本3|@ripaojiedian
+      - 13|🇯🇵 日本4|@ripaojiedian
+      - 13|🇸🇬 新加坡|@ripaojiedian
+      - 13|🇸🇬 新加坡2|@ripaojiedian
+      - 13|🇸🇬 新加坡3|@ripaojiedian
+      - 13|🇺🇸 美国|@ripaojiedian
+      - 13|🇺🇸 美国2|@ripaojiedian
+      - 13|🇺🇸 美国3|@ripaojiedian
+      - 13|🇰🇷 韩国特殊|@ripaojiedian
+      - 13|🇯🇵 日本特殊|@ripaojiedian
+      - 13|🇸🇬 狮城特殊|@ripaojiedian
+      - 13|🇷🇺 俄罗斯|@ripaojiedian
+      - 14|香港3|@ripaojiedian
+      - 14|香港4|@ripaojiedian
+      - 14|香港5|@ripaojiedian
+      - 14|香港6|@ripaojiedian
+      - 14|日本|@ripaojiedian
+      - 14|日本2|@ripaojiedian
+      - 14|日本3|@ripaojiedian
+      - 14|日本4|@ripaojiedian
+      - 14|新加坡|@ripaojiedian
+      - 14|新加坡2|@ripaojiedian
+      - 14|新加坡3|@ripaojiedian
+      - 14|美国|@ripaojiedian
+      - 14|美国2|@ripaojiedian
+      - 14|美国3|@ripaojiedian
+      - 14|韩国特殊|@ripaojiedian
+      - 14|日本特殊|@ripaojiedian
+      - 14|狮城特殊|@ripaojiedian
+      - 14|俄罗斯|@ripaojiedian
+      - 台湾|@ripaojiedian
+    url: https://www.google.com
+    interval: 5
+    strategy: round-robin
+proxies:
+  - name: 高性价比机场:https://kfyun.uk
+    type: ss
+    server: 127.0.0.1
+    port: 443
+    password: 6601fb90e9b3
+    cipher: aes-128-gcm
+
+  - name: 0|🇰🇷1 |  5.5MB/s
+    type: ss
+    server: 52.79.216.192
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+
+  - name: 0|🇸🇬1 |  4.7MB/s
+    type: ss
+    server: 18.141.25.54
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+
+  - name: 0|🇸🇬2 |  1.2MB/s
+    type: ss
+    server: 52.77.240.71
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+
+  - name: 13|🇭🇰 香港3|@ripaojiedian
+    type: ss
+    server: w72tapyb.slashdevslashnetslashtun.net
+    port: 15008
+    password: 8OCJMAVUOSVBYS7V
+    cipher: aes-256-gcm
+
+  - name: 13|🇭🇰 香港4|@ripaojiedian
+    type: ss
+    server: qh62onjn.slashdevslashnetslashtun.net
+    port: 15007
+    password: OJCMTKCU4OMRTZB0
+    cipher: aes-256-gcm
+
+  - name: 13|🇭🇰 香港5|@ripaojiedian
+    type: ss
+    server: ti3hyra4.slashdevslashnetslashtun.net
+    port: 15004
+    password: KPOQG1L4BS2PKML1
+    cipher: aes-256-gcm
+
+  - name: 13|🇭🇰 香港6|@ripaojiedian
+    type: ss
+    server: 120.232.81.50
+    port: 16088
+    password: hGkQ6915tD
+    cipher: aes-256-cfb
+
+  - name: 13|🇹🇼 台湾|@ripaojiedian
+    type: ss
+    server: 59.42.247.243
+    port: 3036
+    password: RenzheCloudSS
+    cipher: rc4-md5
+
+  - name: 13|🇯🇵 日本|@ripaojiedian
+    type: ss
+    server: qh62onjn.slashdevslashnetslashtun.net
+    port: 18003
+    password: BKR0VV9PJF46JCZ3
+    cipher: aes-256-gcm
+
+  - name: 13|🇯🇵 日本2|@ripaojiedian
+    type: ss
+    server: ti3hyra4.slashdevslashnetslashtun.net
+    port: 18006
+    password: 91FWAEHCJS1UDGUA
+    cipher: aes-256-gcm
+
+  - name: 13|🇯🇵 日本3|@ripaojiedian
+    type: ss
+    server: 183.61.177.234
+    port: 18002
+    password: 8UB3I39KM113QT9N
+    cipher: aes-256-gcm
+
+  - name: 13|🇯🇵 日本4|@ripaojiedian
+    type: ss
+    server: w72tapyb.slashdevslashnetslashtun.net
+    port: 18004
+    password: 8RS3Y3L50W6YNV8V
+    cipher: aes-256-gcm
+
+  - name: 13|🇸🇬 新加坡|@ripaojiedian
+    type: ss
+    server: 8tv68qhq.slashdevslashnetslashtun.net
+    port: 16005
+    password: 2XZNFVL28OOLLELR
+    cipher: aes-256-gcm
+
+  - name: 13|🇸🇬 新加坡2|@ripaojiedian
+    type: ss
+    server: w72tapyb.slashdevslashnetslashtun.net
+    port: 16010
+    password: UEC9F1QB458GMQEK
+    cipher: aes-256-gcm
+
+  - name: 13|🇸🇬 新加坡3|@ripaojiedian
+    type: ss
+    server: qh62onjn.slashdevslashnetslashtun.net
+    port: 16003
+    password: LT8A7UX7C0F3NA2S
+    cipher: aes-256-gcm
+
+  - name: 13|🇺🇸 美国|@ripaojiedian
+    type: ss
+    server: qh62onjn.slashdevslashnetslashtun.net
+    port: 17001
+    password: UHVGWR1W2LX9NZT5
+    cipher: aes-256-gcm
+
+  - name: 13|🇺🇸 美国2|@ripaojiedian
+    type: ss
+    server: 8tv68qhq.slashdevslashnetslashtun.net
+    port: 17003
+    password: 866J4U7A62Y3BA7D
+    cipher: aes-256-gcm
+
+  - name: 13|🇺🇸 美国3|@ripaojiedian
+    type: ss
+    server: 183.61.177.234
+    port: 17006
+    password: 5FJF20OHXKZCSDEB
+    cipher: aes-256-gcm
+
+  - name: 13|🇰🇷 韩国特殊|@ripaojiedian
+    type: ss
+    server: 13.230.208.187
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+
+  - name: 13|🇯🇵 日本特殊|@ripaojiedian
+    type: ss
+    server: 13.113.168.96
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+
+  - name: 13|🇸🇬 狮城特殊|@ripaojiedian
+    type: ss
+    server: 54.178.45.63
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+
+  - name: 13|🇷🇺 俄罗斯|@ripaojiedian
+    type: ss
+    server: ti3hyra4.slashdevslashnetslashtun.net
+    port: 20002
+    password: 1T5BLKXJ0M1WF2W4
+    cipher: aes-256-gcm
+
+  - name: 14|香港3|@ripaojiedian
+    type: ss
+    server: w72tapyb.slashdevslashnetslashtun.net
+    port: 15008
+    password: 8OCJMAVUOSVBYS7V
+    cipher: aes-256-gcm
+
+  - name: 14|香港4|@ripaojiedian
+    type: ss
+    server: qh62onjn.slashdevslashnetslashtun.net
+    port: 15007
+    password: OJCMTKCU4OMRTZB0
+    cipher: aes-256-gcm
+
+  - name: 14|香港5|@ripaojiedian
+    type: ss
+    server: ti3hyra4.slashdevslashnetslashtun.net
+    port: 15004
+    password: KPOQG1L4BS2PKML1
+    cipher: aes-256-gcm
+
+  - name: 14|香港6|@ripaojiedian
+    type: ss
+    server: 120.232.81.50
+    port: 16088
+    password: hGkQ6915tD
+    cipher: aes-256-cfb
+
+  - name: 14|日本|@ripaojiedian
+    type: ss
+    server: qh62onjn.slashdevslashnetslashtun.net
+    port: 18003
+    password: BKR0VV9PJF46JCZ3
+    cipher: aes-256-gcm
+
+  - name: 14|日本2|@ripaojiedian
+    type: ss
+    server: ti3hyra4.slashdevslashnetslashtun.net
+    port: 18006
+    password: 91FWAEHCJS1UDGUA
+    cipher: aes-256-gcm
+
+  - name: 14|日本3|@ripaojiedian
+    type: ss
+    server: 183.61.177.234
+    port: 18002
+    password: 8UB3I39KM113QT9N
+    cipher: aes-256-gcm
+
+  - name: 14|日本4|@ripaojiedian
+    type: ss
+    server: w72tapyb.slashdevslashnetslashtun.net
+    port: 18004
+    password: 8RS3Y3L50W6YNV8V
+    cipher: aes-256-gcm
+
+  - name: 14|新加坡|@ripaojiedian
+    type: ss
+    server: 8tv68qhq.slashdevslashnetslashtun.net
+    port: 16005
+    password: 2XZNFVL28OOLLELR
+    cipher: aes-256-gcm
+
+  - name: 14|新加坡2|@ripaojiedian
+    type: ss
+    server: w72tapyb.slashdevslashnetslashtun.net
+    port: 16010
+    password: UEC9F1QB458GMQEK
+    cipher: aes-256-gcm
+
+  - name: 14|新加坡3|@ripaojiedian
+    type: ss
+    server: qh62onjn.slashdevslashnetslashtun.net
+    port: 16003
+    password: LT8A7UX7C0F3NA2S
+    cipher: aes-256-gcm
+
+  - name: 14|美国|@ripaojiedian
+    type: ss
+    server: qh62onjn.slashdevslashnetslashtun.net
+    port: 17001
+    password: UHVGWR1W2LX9NZT5
+    cipher: aes-256-gcm
+
+  - name: 14|美国2|@ripaojiedian
+    type: ss
+    server: 8tv68qhq.slashdevslashnetslashtun.net
+    port: 17003
+    password: 866J4U7A62Y3BA7D
+    cipher: aes-256-gcm
+
+  - name: 14|美国3|@ripaojiedian
+    type: ss
+    server: 183.61.177.234
+    port: 17006
+    password: 5FJF20OHXKZCSDEB
+    cipher: aes-256-gcm
+
+  - name: 14|韩国特殊|@ripaojiedian
+    type: ss
+    server: 13.230.208.187
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+
+  - name: 14|日本特殊|@ripaojiedian
+    type: ss
+    server: 13.113.168.96
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+
+  - name: 14|狮城特殊|@ripaojiedian
+    type: ss
+    server: 54.178.45.63
+    port: 443
+    password: amazonskr05
+    cipher: aes-256-cfb
+
+  - name: 14|俄罗斯|@ripaojiedian
+    type: ss
+    server: ti3hyra4.slashdevslashnetslashtun.net
+    port: 20002
+    password: 1T5BLKXJ0M1WF2W4
+    cipher: aes-256-gcm
+
+  - name: 台湾|@ripaojiedian
+    type: ss
+    server: 59.42.247.243
+    port: 3036
+    password: RenzheCloudSS
+    cipher: rc4-md5
+
