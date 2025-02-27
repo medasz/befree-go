@@ -35,10 +35,9 @@ func main() {
 	if YamlFile != "" {
 		if lib.FileExists(YamlFile) {
 			fmt.Printf(" [+] 检测到 %s 文件，程序正在启动...\n", YamlFile)
-			if err := lib.Runner(YamlFile, ClashPath); err != nil {
-				fmt.Println(err)
-				os.Exit(1)
-			}
+			clash := lib.NewClashKernel(lib.WithConfigFile(YamlFile))
+			clash.Run()
+			os.Exit(1)
 		}
 	} else {
 		fmt.Println("我的天空！ Befree v0.4")
@@ -76,10 +75,9 @@ func main() {
 				os.Exit(1)
 			}
 			//4.运行clash
-			if err := lib.Runner(outputFile, ClashPath); err != nil {
-				fmt.Println(err)
-				os.Exit(1)
-			}
+			clash := lib.NewClashKernel(lib.WithConfigFile(outputFile))
+			clash.Run()
+			os.Exit(1)
 		} else {
 			fmt.Println(" [-] 未获取到可用节点，无法启动befree")
 		}
