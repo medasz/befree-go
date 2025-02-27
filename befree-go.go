@@ -13,7 +13,6 @@ var (
 	Port      int
 	Target    string
 	YamlFile  string
-	ClashPath string
 )
 
 const banner = "\n _______             ________                                       ______            \n|       \\           |        \\                                     /      \\           \n| $$$$$$$\\  ______  | $$$$$$$$______    ______    ______          |  $$$$$$\\  ______  \n| $$__/ $$ /      \\ | $$__   /      \\  /      \\  /      \\  ______ | $$ __\\$$ /      \\ \n| $$    $$|  $$$$$$\\| $$  \\ |  $$$$$$\\|  $$$$$$\\|  $$$$$$\\|      \\| $$|    \\|  $$$$$$\\\n| $$$$$$$\\| $$    $$| $$$$$ | $$   \\$$| $$    $$| $$    $$ \\$$$$$$| $$ \\$$$$| $$  | $$\n| $$__/ $$| $$$$$$$$| $$    | $$      | $$$$$$$$| $$$$$$$$        | $$__| $$| $$__/ $$\n| $$    $$ \\$$     \\| $$    | $$       \\$$     \\ \\$$     \\         \\$$    $$ \\$$    $$\n \\$$$$$$$   \\$$$$$$$ \\$$     \\$$        \\$$$$$$$  \\$$$$$$$          \\$$$$$$   \\$$$$$$ \n"
@@ -23,7 +22,6 @@ func init() {
 	flag.IntVar(&Port, "p", 59981, "Specify a port number(http&socks5)")
 	flag.StringVar(&Target, "t", "https://www.google.com", "Specify a link for speed testing(default:https://www.google.com)")
 	flag.StringVar(&YamlFile, "y", "", "Specify a yourself clash yaml file")
-	flag.StringVar(&ClashPath, "c", "", "Specify your custom clash.exe path")
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "Usage of %s:\n", banner)
 		flag.PrintDefaults()
