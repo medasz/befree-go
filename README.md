@@ -16,8 +16,6 @@ Usage of
 | $$    $$ \$$     \| $$    | $$       \$$     \ \$$     \         \$$    $$ \$$    $$
  \$$$$$$$   \$$$$$$$ \$$     \$$        \$$$$$$$  \$$$$$$$          \$$$$$$   \$$$$$$ 
 :
-  -c string
-    	Specify your custom clash.exe path
   -f string
     	Specify a contain subscribe file path (default "./aaa.txt")
   -p int
@@ -38,4 +36,4 @@ Usage of
 - [x] 完成-t參數
 
 ## 注意
-<span style="color: red">自帶的windows和linux版clash全是本人從網上下載，請自行甄別安全性，也可通過`-c`參數指定clash
+~~<span style="color: red">自帶的windows和linux版clash全是本人從網上下載，請自行甄別安全性，也可通過`-c`參數指定clash~~

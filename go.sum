@@ -29,8 +29,6 @@ github.com/mdlayher/netlink v1.7.2 h1:/UtM3ofJap7Vl4QWCPDGXY8d3GIY2UGSDbK+QWmY8/
 github.com/mdlayher/netlink v1.7.2/go.mod h1:xraEF7uJbxLhc5fpHL4cPe221LI2bdttWlU+ZGLfQSw=
 github.com/mdlayher/socket v0.5.1 h1:VZaqt6RkGkt2OE9l3GcC6nZkqD3xKeQLyfleW/uBcos=
 github.com/mdlayher/socket v0.5.1/go.mod h1:TjPLHI1UgwEv5J1B5q0zTZq12A/6H7nKmtTanQE37IQ=
-github.com/medasz/clash-kernel v0.0.0-20250225144006-f7797c45dcbd h1:kFSdtZE0QTk+wR/iWHKCKrGx+xS+OmxUo5ov7kQ0h7c=
-github.com/medasz/clash-kernel v0.0.0-20250225144006-f7797c45dcbd/go.mod h1:H9MxYX52MIsjTY/aCDhGXBvU6tit3T9HiN7MAojacsM=
 github.com/medasz/clash-kernel v0.0.0-20250226161401-855317846e6a h1:zymdECbosl0MKtqdmNaedIrp/N6fES5y777mUo4JEXQ=
 github.com/medasz/clash-kernel v0.0.0-20250226161401-855317846e6a/go.mod h1:H9MxYX52MIsjTY/aCDhGXBvU6tit3T9HiN7MAojacsM=
 github.com/miekg/dns v1.1.63 h1:8M5aAw6OMZfFXTT7K5V0Eu5YiiL8l7nUAkyN6C9YwaY=
